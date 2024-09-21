@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sushi Omakase</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="sushi.css" />
+    <link rel="stylesheet" href="omakase.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +14,102 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css"
+      integrity="sha512-B46MVOJpI6RBsdcU307elYeStF2JKT87SsHZfRSkjVi4/iZ3912zXi45X5/CBr/GbCyLx6M1GQtTKYRd52Jxgw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/2eGFVRZLQ5PaaCWp5ih2NtL59o7lPfcA5pHtdV"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // script.js
+
+      $(document).ready(function () {
+        const sushiData = [
+          {
+            name: "Uramaki (裏巻き寿司)",
+            description:
+              "Rolled sushi wrapped in seaweed (nori) and sliced into bite-sized pieces.",
+          },
+          {
+            name: "Gunkan (軍艦巻き)",
+            description:
+              "A bowl of vinegared rice topped with various sashimi and ingredients.",
+          },
+          {
+            name: "Temaki (手巻き寿司)",
+            description:
+              "Inside-out rolls with rice on the outside and seaweed inside.",
+          },
+          {
+            name: "Narezushi (馴れ寿司)",
+            description:
+              "Hand-rolled sushi in a cone shape with seaweed, rice, and fillings.",
+          },
+          {
+            name: "Inari Sushi (稲荷寿司)",
+            description:
+              "Thinly sliced raw fish or seafood, served without rice.",
+          },
+          {
+            name: "Aburi Sushi (炙り寿司)",
+            description:
+              "A bowl of vinegared rice topped with various sashimi and ingredients.",
+          },
+          {
+            name: "Oshi Sushi (押し寿司)",
+            description:
+              "Small, ball-shaped sushi often decorated with colorful toppings.",
+          },
+          {
+            name: "Sashimi (刺身)",
+            description:
+              "Fermented sushi, an ancient method of preserving fish with rice.",
+          },
+          {
+            name: "Nigiri (握り寿司)",
+            description:
+              "Small, ball-shaped sushi often decorated with colorful toppings.",
+          },
+          {
+            name: "Maki (巻き寿司)",
+            description: "Hand-pressed sushi with fish or seafood atop rice.",
+          },
+          {
+            name: "Temari (手まり寿司)",
+            description:
+              "Inside-out rolls with rice on the outside and seaweed inside.",
+          },
+          {
+            name: "Chirashi (ちらし寿司)",
+            description:
+              "Lightly seared sushi with the top layer of fish torched.",
+          },
+        ];
+
+        sushiData.forEach(function (sushi) {
+          const sushiCard = `
+          <div class="sushi-card">
+            <div class="image-wrapper">
+                <div class="image"></div>
+            </div>
+            <div class="content-wrapper">
+                <h3>${sushi.name}</h3>
+                <p>${sushi.description}</p>
+                </div>
+            </div>
+        `;
+
+          $("#sushi-grid").append(sushiCard);
+        });
+      });
+    </script>
   </head>
   <body>
     <!-- Navbar -->
@@ -33,44 +131,184 @@
     </header>
 
     <!-- Main Section -->
-    <section class="hero">
+    <section class="hero container">
+      <img
+        src="/assets/images/hero-japanese-background.png"
+        class="hero-background"
+      />
       <div class="hero-content">
-        <h2 class="subtitle">Authentic Sushi</h2>
+        <h2 class="hero-section-subtitle">AUTHENTIC SUSHI</h2>
         <h1 class="title hero-section-title">OMAKASE</h1>
-        <p class="description">
-          Experience the finest sushi crafted by our expert chefs, with every
-          piece tailored to your taste.
+        <p class="hero-section-description">
+          EXPERIENCE THE FINEST SUSHI CRAFTED BY OUR EXPERT CHEFS, WITH EVERY
+          PIECE TAILORED TO YOUR TASTE.
         </p>
         <div class="cta-buttons">
-          <button class="btn-book">Book a Table</button>
-          <button class="btn-menu">View Menu</button>
+          <button class="btn-book">BOOK A TABLE</button>
+          <button class="btn-menu">VIEW MENU</button>
         </div>
       </div>
+      <aside class="social-sidebar">
+        <a href="#" class="social-icon">
+          <!-- facebook icon -->
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="12" cy="12" r="10.5" stroke="white" stroke-width="2" />
+            <path
+              d="M15.9103 15.2112L16.3767 12.2476H13.4589V10.3252C13.4589 9.51428 13.8657 8.7233 15.1726 8.7233H16.5V6.20024C16.5 6.20024 15.2959 6 14.1452 6C11.7411 6 10.1712 7.4197 10.1712 9.98883V12.2476H7.5V15.2112H10.1712V22.3759C10.7075 22.458 11.2562 22.5 11.8151 22.5C12.374 22.5 12.9226 22.458 13.4589 22.3759V15.2112H15.9103Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+
+        <a href="#" class="social-icon">
+          <!-- instagram icon -->
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.35 5.225C18.35 6.09485 17.6448 6.8 16.775 6.8C15.9052 6.8 15.2 6.09485 15.2 5.225C15.2 4.35515 15.9052 3.65 16.775 3.65C17.6448 3.65 18.35 4.35515 18.35 5.225Z"
+              fill="white"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11 16.25C13.8995 16.25 16.25 13.8995 16.25 11C16.25 8.1005 13.8995 5.75 11 5.75C8.1005 5.75 5.75 8.1005 5.75 11C5.75 13.8995 8.1005 16.25 11 16.25ZM11 14.15C12.7397 14.15 14.15 12.7397 14.15 11C14.15 9.2603 12.7397 7.85 11 7.85C9.2603 7.85 7.85 9.2603 7.85 11C7.85 12.7397 9.2603 14.15 11 14.15Z"
+              fill="white"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0.5 10.58C0.5 7.05167 0.5 5.2875 1.18666 3.93986C1.79066 2.75444 2.75444 1.79066 3.93986 1.18666C5.2875 0.5 7.05167 0.5 10.58 0.5H11.42C14.9483 0.5 16.7125 0.5 18.0601 1.18666C19.2456 1.79066 20.2093 2.75444 20.8133 3.93986C21.5 5.2875 21.5 7.05167 21.5 10.58V11.42C21.5 14.9483 21.5 16.7125 20.8133 18.0601C20.2093 19.2456 19.2456 20.2093 18.0601 20.8133C16.7125 21.5 14.9483 21.5 11.42 21.5H10.58C7.05167 21.5 5.2875 21.5 3.93986 20.8133C2.75444 20.2093 1.79066 19.2456 1.18666 18.0601C0.5 16.7125 0.5 14.9483 0.5 11.42V10.58ZM10.58 2.6H11.42C13.2188 2.6 14.4416 2.60163 15.3868 2.67886C16.3075 2.75408 16.7783 2.89042 17.1068 3.05777C17.897 3.46044 18.5396 4.10296 18.9422 4.89324C19.1096 5.22168 19.2459 5.69251 19.3211 6.61318C19.3984 7.55837 19.4 8.78118 19.4 10.58V11.42C19.4 13.2188 19.3984 14.4416 19.3211 15.3868C19.2459 16.3075 19.1096 16.7783 18.9422 17.1068C18.5396 17.897 17.897 18.5396 17.1068 18.9422C16.7783 19.1096 16.3075 19.2459 15.3868 19.3211C14.4416 19.3984 13.2188 19.4 11.42 19.4H10.58C8.78118 19.4 7.55837 19.3984 6.61318 19.3211C5.69251 19.2459 5.22168 19.1096 4.89324 18.9422C4.10296 18.5396 3.46044 17.897 3.05777 17.1068C2.89042 16.7783 2.75408 16.3075 2.67886 15.3868C2.60163 14.4416 2.6 13.2188 2.6 11.42V10.58C2.6 8.78118 2.60163 7.55837 2.67886 6.61318C2.75408 5.69251 2.89042 5.22168 3.05777 4.89324C3.46044 4.10296 4.10296 3.46044 4.89324 3.05777C5.22168 2.89042 5.69251 2.75408 6.61318 2.67886C7.55837 2.60163 8.78118 2.6 10.58 2.6Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+        <a href="#" class="social-icon">
+          <svg
+            width="25"
+            height="21"
+            viewBox="0 0 25 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19.7869 5.48231C20.3742 5.13612 21.3451 4.20208 21.6569 3.0824C21.0382 3.4813 19.7727 3.94258 18.9318 4.13963C18.1358 3.28457 17.0019 2.75 15.7435 2.75C13.3351 2.75 11.3826 4.70819 11.3826 7.12373C11.3826 7.46032 11.4205 7.78802 11.4923 8.10278C7.6859 8.01393 4.60912 6.4165 2.55613 3.57226C2.05027 4.23707 1.02109 7.31618 3.88185 9.36308C3.49809 9.39807 2.52125 9.25811 1.94561 8.85573C1.84095 9.67799 2.31192 12.3722 5.382 13.142C4.77148 13.3869 3.68997 13.2819 3.4632 13.1945C3.6202 14.0692 4.82381 16.1161 7.49268 16.2386C5.71855 17.9308 2.86624 18.1813 1.25 18.0767C3.15363 19.2943 5.41531 20 7.84156 20C14.9574 20 20.2605 13.9535 20.1033 7.02232C20.948 6.4368 21.9773 5.39094 22.25 4.76192C21.6986 5.13603 20.3028 5.40428 19.7869 5.48231ZM19.7869 5.48231C19.7821 5.47048 19.7918 5.49408 19.7869 5.48231Z"
+              stroke="white"
+              stroke-width="2"
+            />
+          </svg>
+        </a>
+      </aside>
+      <!-- <div
+        
+        style="border: 1px solid red; height: fit-content"
+      > -->
+      <img src="/assets/images/logos.png" class="hero-bottom-logos" />
+      <!-- </div> -->
     </section>
 
     <!-- Social Icons -->
-    <aside class="social-links">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-    </aside>
 
     <!-- Explore Menu Section -->
     <section class="explore-menu">
-      <h2 class="menu-title">Explore <span>Our Menu</span></h2>
-      <div class="menu-items">
-        <div class="menu-item">
-          <div class="menu-card">Beverage</div>
+      <div class="section-title-container container">
+        <div class="section-title-upper-border"></div>
+        <div class="section-title-lower-border"></div>
+        <div class="section-title-subtext">OUR MENU</div>
+        <div class="section-title">
+          EXPLORE <span class="section-title-gray"> OUR MENU</span>
         </div>
-        <div class="menu-item">
-          <div class="menu-card">Food</div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-card">Desserts</div>
+      </div>
+      <div class="section-body">
+        <div class="menu-items">
+          <div class="card">
+            <div class="card-text">Beverage</div>
+          </div>
+          <div class="card">
+            <div class="card-text">Food</div>
+          </div>
+          <div class="card">
+            <div class="card-text">Deserts</div>
+          </div>
+          <!-- <div class="menu-item">
+                    <div class="menu-card">Beverage</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-card">Food</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-card">Desserts</div>
+                </div> -->
         </div>
       </div>
     </section>
 
+    <!-- menu card section -->
+    <div class="container">
+      <section class="menu-detail-section">
+        <div class="section-title-container container">
+          <div class="section-title-upper-border"></div>
+          <div class="section-title-lower-border"></div>
+          <div class="section-title-subtext">OUR MENU</div>
+          <div class="section-title">
+            EXPLORE <span class="section-title-gray"> OUR MENU</span>
+          </div>
+        </div>
+        <div class="section-body">
+          <div id="sushi-grid" class="sushi-grid container"></div>
+        </div>
+        <p class="view-more-button">VIEW FULL MENU</p>
+      </section>
+    </div>
+
+    <!-- about the omakase section -->
+    <section class="omakase-container">
+      <span class="omakase-background-image"></span>
+      <div class="image-section">
+        <div class="top-rectangles-container">
+          <div class="first-rectangle"></div>
+          <div class="second-rectangle"></div>
+        </div>
+        <div class="bottom-rectangles-container">
+          <div class="third-rectangle"></div>
+          <div class="fourth-rectangle">
+            <img src="/assets/images/omakase-image-section.png" />
+          </div>
+        </div>
+      </div>
+      <div class="text-section">
+        <div>
+          <div class="section-title-subtext">ABOUT THE OMAKASE</div>
+          <div class="section-title">
+            CREATING A
+            <span class="section-title-gray">NEW WORLD OF FLAVORS</span>
+          </div>
+
+          <div class="omakase-body-text">
+            Welcome to Omakase, where the delicate artistry of sushi meets the
+            vibrant flavors of Japan. At Omakase, we are passionate about
+            delivering an authentic and unforgettable dining experience,
+            bringing the essence of traditional Japanese cuisine to every plate.
+            <br />
+            Our master chefs meticulously craft each piece of sushi using the
+            freshest, highest-quality ingredients sourced locally and globally.
+            From the rich, buttery taste of our sashimi to the perfectly
+            balanced rolls, every bite at Omakase is a testament to our
+            commitment to excellence and authenticity.
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
