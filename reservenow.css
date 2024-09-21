@@ -1,0 +1,80 @@
+.reserve-now {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.reserve-now::before,
+.reserve-now::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: white;
+}
+
+.reserve-now::before {
+    top: 0;
+    left: 0;
+    width: 50%; /* Half-width on the left side at the top */
+}
+
+.reserve-now::after {
+    bottom: 0;
+    right: 0;
+    width: 50%; /* Half-width on the right side at the bottom */
+}
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-section, .reserve-section {
+    width: 45%;
+  }
+  
+  .contact-section h2, .reserve-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact-section p, .reserve-section label {
+    margin: 10px 0;
+  }
+  
+  .reserve-section form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .reserve-section input, .reserve-section textarea {
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .reserve-section button {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reserve-section button:hover {
+    background-color: #ccc;
+  }
