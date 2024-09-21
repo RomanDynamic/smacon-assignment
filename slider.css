@@ -1,0 +1,88 @@
+body {
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slider-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 20px; */
+  background-color: #000000;
+}
+
+.reserve-now {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.reserve-now p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.reserve-now h3 {
+  font-size: 2rem;
+  color: #000;
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.slider {
+  overflow-x: scroll; /* Allows horizontal scrolling */
+  display: flex;
+  /* border: 3px solid white; */
+  width: 100%; /* Ensure the slider takes full width */
+  gap: 20px; /* Gap between items */
+  white-space: nowrap; /* Prevents wrapping of child elements */
+}
+.slider::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+.review-card {
+  padding: 40px;
+  width: 40%; /* Width of each review card */
+  flex-shrink: 0; /* Prevents shrinking of cards when scrolling */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #1A1A1A;
+  text-wrap: wrap;
+}
+.review-card h2 {
+  font-size: 1.8rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.review-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.review-footer {
+    /* border: 3px solid white; */
+    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.review-footer div {
+  font-size: 1rem;
+  color: #000;
+}
+
+.review-footer span {
+  font-size: 1rem;
+  color: #555;
+}
