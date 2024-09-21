@@ -1,0 +1,63 @@
+.sushi-grid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  /* max-width: 1200px; */
+}
+
+.sushi-card {
+  /* padding: 20px; */
+  height: 367px;
+  /* width: 350px; */
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.sushi-card .image-wrapper {
+  height: 254px;
+  padding: 2rem;
+  background-color: black;
+}
+.sushi-card .image {
+  background-color: #4f4f4f;
+  height: 100%;
+  border-radius: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.sushi-card .content-wrapper {
+  padding: 1rem 0;
+  height: 30%;
+}
+
+.sushi-card h3 {
+  font-weight: 300;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.sushi-card p {
+  font-size: 17px;
+  line-height: 1.4;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .sushi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .sushi-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.view-more-button {
+  color: white;
+  text-align: center;
+  margin-top: 6rem;
+}
