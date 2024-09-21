@@ -1,0 +1,217 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+.container {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #333;
+  color: white;
+}
+
+.navbar-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: none;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 20px; */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  /* position: absolute; */
+  /* width: 100%; */
+  top: 0;
+  left: 0;
+  z-index: 10;
+  color: white;
+  border-bottom: 1px solid rgba(149, 149, 149, 0.4);
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar .nav-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .btn-book {
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .btn-book:hover {
+  background-color: darkred;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("your-background-image.jpg") no-repeat center center/cover;
+  position: relative;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 24px;
+  color: #e1b12c;
+}
+
+.title {
+  font-size: 80px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.cta-buttons button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.cta-buttons .btn-book {
+  background-color: red;
+}
+
+.cta-buttons .btn-menu {
+  background-color: #444;
+}
+
+/* Social Icons */
+.social-links {
+  position: fixed;
+  left: 20px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #e1b12c;
+}
+
+/* Explore Menu Section */
+.explore-menu {
+  padding: 50px 0;
+  background-color: #222;
+  text-align: center;
+}
+
+.menu-title {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.menu-title span {
+  color: #e1b12c;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.menu-item {
+  flex: 1;
+}
+
+.menu-card {
+  height: 300px;
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.menu-card:hover {
+  background-color: #666;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .title {
+    font-size: 50px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .navbar nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu-items {
+    flex-direction: column;
+  }
+
+  .menu-item {
+    margin-bottom: 20px;
+  }
+}
