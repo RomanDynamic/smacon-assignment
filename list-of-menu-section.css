@@ -1,0 +1,18 @@
+.list-of-menu-section .section-body {
+  align-items: center;
+}
+.list-of-menu-section .image-section {
+  width: 30%;
+  height: 400px;
+  background: url("/assets//images/bg-list-of-menu.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid white;
+}
+
+.list-of-menu-section .card-section {
+  width: 70%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+}
