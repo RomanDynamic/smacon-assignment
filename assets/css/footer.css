@@ -1,0 +1,65 @@
+.footer {
+  background-color: #1c1c1c;
+  padding: 2rem 0;
+}
+
+.footer-container {
+  width: 100%;
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer .logo-container img {
+  color: white;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+.highlight {
+  color: red;
+}
+
+.nav-links a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.phone-number {
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+.book-button {
+  background-color: #3a3a3a;
+  color: white;
+  padding: 15px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.book-button:hover {
+  background-color: #555;
+}

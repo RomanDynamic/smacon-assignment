@@ -1,54 +1,46 @@
-const beverageData = [
+const dessertData = [
   {
-    name: "Plum Wine (梅酒)",
-    price: "$19.75",
-    description: "Smooth and refined, often enjoyed neat or on the rocks.",
+    name: "Anmitsu (あんみつ)",
+    price: "$14.90",
+    description: "Layered pastry with matcha-flavored cream.",
   },
   {
-    name: "Beer (ビール)",
-    price: "$30.80",
-    description:
-      "Non-alcoholic option with a spicy kick that complements meals.",
+    name: "Fruit Platter",
+    price: "$27.40",
+    description: "Firm jelly made from red bean paste, agar, and sug...",
   },
   {
-    name: "Sparkling Wine",
-    price: "$26.05",
-    description: "Sweet, fruity wine made from plums, served chilled.",
+    name: "Sesame Balls (ごま団子)",
+    price: "$39.60",
+    description: "Rich and creamy ice cream flavored with green tea po...",
   },
   {
-    name: "White Wine",
-    price: "$26.05",
-    description: "Champagne or Prosecco, providing a refreshing contrast.",
+    name: "Taiyaki (鯛焼き)",
+    price: "$13.25",
+    description: "Fish-shaped pastries filled with sweet fillings such as r...",
   },
   {
-    name: "Japanese Whiskey",
-    price: "$34.90",
-    description: "Japanese rice wine, with varieties like Junmai, Ginjo.",
+    name: "Dorayaki (どら焼き)",
+    price: "$10.60",
+    description: "Fresh seasonal fruits like melon, strawberries, or pe...",
   },
   {
-    name: "Matcha (抹茶)",
-    price: "$16.50",
-    description: "Distilled Japanese spirit, often served on the rocks.",
-  },
-  {
-    name: "Green Tea (緑茶)",
-    price: "$38.50",
-    description: "Traditional Japanese beverage, often served with meals.",
-  },
-  {
-    name: "Ginger Ale",
+    name: "Yokan (羊羹)",
     price: "$18.60",
-    description: "Light, crisp beers like Japanese lagers (e.g., Asahi).",
+    description: "Fried or baked rice balls coated in sesame seeds an...",
   },
   {
-    name: "Shochu (焼酎)",
-    price: "$21.30",
-    description:
-      "Finely ground green tea powder, served as a concentrated drink.",
+    name: "Matcha Ice Cream (抹茶アイスクリーム)",
+    price: "$36.15",
+    description: "Creamy cheesecake flavored with green tea, bl...",
+  },
+  {
+    name: "Mille-Feuille Matcha Cake",
+    price: "$32.20",
+    description: "Traditional Japanese dessert with agar jelly, frui...",
   },
 ];
 
-// Function to generate menu items
 function generateMenuItems(data) {
   data.forEach((item) => {
     const menuItemHTML = `
@@ -61,11 +53,8 @@ function generateMenuItems(data) {
               </div>
 
           `;
-    $("#beverage-items").append(menuItemHTML);
+    $("#dessert-items").append(menuItemHTML);
   });
 }
 
-// Call the function to generate the menu
-$(document).ready(function () {
-  generateMenuItems(beverageData);
-});
+generateMenuItems(dessertData);

@@ -17,6 +17,11 @@
   padding-right: 5rem;
 }
 
+.section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
 @font-face {
   font-family: Bebas;
   src: url("/assets/fonts/BebasKai.ttf");
@@ -293,6 +298,8 @@ body {
 .section-title-container {
   position: relative;
   padding: 2rem;
+  width: 100%;
+  margin: 4rem 0;
 }
 
 .section-title-container .section-title-upper-border {
@@ -380,7 +387,7 @@ body {
 
 .menu-detail-section {
   background-color: #1a1a1a;
-  padding-top: 4rem;
+  padding-top: 0.1rem;
   padding-bottom: 4rem;
 }
 

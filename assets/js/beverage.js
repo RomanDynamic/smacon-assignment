@@ -66,6 +66,5 @@ function generateMenuItems(data) {
 }
 
 // Call the function to generate the menu
-$(document).ready(function () {
-  generateMenuItems(beverageData);
-});
+
+generateMenuItems(beverageData);

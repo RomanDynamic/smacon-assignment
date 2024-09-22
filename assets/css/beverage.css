@@ -10,14 +10,9 @@
 }
 /* .beverage-items-wrapper {
 } */
-#beverage-items {
-  display: grid !important;
-  grid-template-columns: auto auto;
-  column-gap: 2rem;
-  row-gap: 1rem;
-}
-
-#food-items {
+#beverage-items,
+#food-items,
+#dessert-items {
   display: grid !important;
   grid-template-columns: auto auto;
   column-gap: 2rem;
