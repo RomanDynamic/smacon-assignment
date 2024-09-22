@@ -10,6 +10,13 @@
   padding-left: 5rem;
   padding-right: 5rem;
 }
+
+.container .inner-container {
+  width: 100%;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
 @font-face {
   font-family: Bebas;
   src: url("/assets/fonts/BebasKai.ttf");
@@ -303,6 +310,11 @@ body {
   border: 1.5px solid #7f7f7f;
 }
 
+.section-title-subtext {
+  color: #dd2b2b;
+  font-size: 18px;
+}
+
 .section-title-container .section-title-subtext {
   text-align: center;
 }
@@ -378,27 +390,27 @@ body {
   padding: 3rem 0;
   position: relative;
   z-index: 2;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 80%,
+    rgba(255, 255, 255, 0.005) 100%
+  );
 }
 
-.omakase-container::before {
+/* .omakase-container::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  /* background: url("/assets/images/bg-image-omakase.png") no-repeat center
-    center/cover; */
   z-index: -1;
   opacity: 0.2;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.6) 0%,
-    rgba(255, 255, 255, 0.0005) 90%,
-    rgba(0, 0, 0, 1) 100%
+    rgba(255, 255, 255, 0.5) 80%,
+    rgba(255, 255, 255, 0.1) 100%
   );
-}
-
-.section-title-subtext {
-  color: #dd2b2b;
-  font-size: 18px;
-}
+} */
