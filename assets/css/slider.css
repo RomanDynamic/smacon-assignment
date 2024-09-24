@@ -2,23 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding: 20px; */
   background-color: #000000;
-}
-
-.reserve-now {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.reserve-now p {
-  font-size: 1.2rem;
-  color: #333;
-}
-
-.reserve-now h3 {
-  font-size: 2rem;
-  color: #000;
 }
 
 .slider-container {
@@ -28,57 +12,50 @@
 }
 
 .slider {
-  overflow-x: scroll; /* Allows horizontal scrolling */
+  overflow-x: scroll;
+  /* min-height: fit-content; */
+  overflow-y: hidden;
   display: flex;
-  /* border: 3px solid white; */
-  width: 100%; /* Ensure the slider takes full width */
-  gap: 20px; /* Gap between items */
-  white-space: nowrap; /* Prevents wrapping of child elements */
+  width: 100%;
+  gap: 20px; /* Add space between cards */
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  position: relative;
 }
+
 .slider::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Edge */
+  display: none;
 }
 
 .review-card {
   padding: 40px;
-  width: 40%; /* Width of each review card */
-  flex-shrink: 0; /* Prevents shrinking of cards when scrolling */
+  width: 40%;
+
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   background-color: #1a1a1a;
+  transition: transform 0.3s, filter 0.3s; /* Smooth transition for brightness and scaling */
+  filter: brightness(0.7); /* Default lower brightness */
+  margin-right: 20px; /* Add margin to ensure there is space between the cards */
+}
+.review-card p{
   text-wrap: wrap;
 }
-.review-card h2 {
-  font-size: 1.8rem;
-  color: #000;
-  margin-bottom: 10px;
-}
 
-.review-card p {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.5;
+.review-card.highlight {
+  transform: scale(1.1); /* Slightly enlarge the middle card */
+  filter: brightness(1); /* Brighten the middle card */
 }
 
 .review-footer {
-  /* border: 3px solid white; */
   width: 100%;
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
 }
 
-.review-footer div {
-  font-size: 1rem;
-  color: #000;
-}
-
-.review-footer span {
-  font-size: 1rem;
-  color: #555;
-}
 
 @media screen and (max-width: 768px) {
   .slider {
