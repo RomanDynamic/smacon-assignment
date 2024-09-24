@@ -77,15 +77,16 @@ body {
 
 .navbar .btn-book {
   padding: 10px 20px;
-  background-color: red;
+  background-color: rgba(255, 255, 255, 0.1);
   color: white;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  border-radius: 0;
 }
 
 .navbar .btn-book:hover {
-  background-color: darkred;
+  background-color: #dd2b2b;
 }
 
 /* For smaller screens - hide large screen nav, show mobile nav */
@@ -304,7 +305,8 @@ body {
 }
 
 .menu-items {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
   justify-content: center;
   gap: 30px;
 }
@@ -329,16 +331,17 @@ body {
 }
 
 .social-sidebar {
-  position: absolute;
-  left: 3rem;
-  top: 70%;
-  transform: translateY(-50%);
+  position: fixed;
+  left: 2.5rem;
+  top: 60%;
+  transform: translateY(-60%);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  z-index: 1000;
 }
 
 .social-sidebar::before {
@@ -488,6 +491,47 @@ body {
 } */
 
 /* Mobile Responsive */
+@media screen and (max-width: 1300px) {
+  .menu-items {
+    grid-template-columns: auto auto;
+    place-items: center;
+  }
+
+  .menu-items .card:last-child {
+    grid-column: 1/-1;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .social-sidebar {
+    left: 0;
+    top: 70%;
+  }
+
+  .social-sidebar::before {
+    display: none;
+  }
+
+  .social-icon {
+    height: 30px;
+    width: 30px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .menu-items {
+    grid-template-columns: auto;
+  }
+
+  .menu-item {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .container {
     padding-left: 1rem;
@@ -515,23 +559,6 @@ body {
     gap: 10px;
   }
 
-  .menu-items {
-    flex-direction: column;
-  }
-
-  .menu-item {
-    margin-bottom: 20px;
-  }
-
-  .social-sidebar {
-    left: 0;
-    top: 50%;
-  }
-
-  .social-icon {
-    height: 30px;
-    width: 30px;
-  }
   .hero-bottom-logos {
     width: 100%;
   }

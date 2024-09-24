@@ -41,7 +41,10 @@
   filter: brightness(0.7); /* Default lower brightness */
   margin-right: 20px; /* Add margin to ensure there is space between the cards */
 }
-.review-card p{
+.review-card p {
+  text-wrap: wrap;
+}
+.review-card h2 {
   text-wrap: wrap;
 }
 
@@ -56,12 +59,18 @@
   justify-content: space-between;
 }
 
-
 @media screen and (max-width: 768px) {
   .slider {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
   .review-card {
-    width: 100%;
+    width: 250px;
+    /* padding: 2rem; */
+  }
+  .review-card h2 {
+    text-align: center;
+  }
+  .review-footer {
+    flex-direction: column;
   }
 }
