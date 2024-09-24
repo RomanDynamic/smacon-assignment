@@ -17,9 +17,10 @@
   align-items: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .list-of-menu-section .inner-container {
     flex-direction: column;
+    padding: 0;
   }
   .list-of-menu-section .image-section {
     display: none;

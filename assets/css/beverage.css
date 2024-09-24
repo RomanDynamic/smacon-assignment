@@ -23,7 +23,7 @@
   display: block !important;
   width: 100%;
   height: fit-content;
-  padding: 4rem;
+  padding: 6rem;
   background-color: #2e2e2e;
   border: 1px solid #3e3e3e;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -88,6 +88,12 @@ h2 {
   }
 
   .beverage-card {
-    padding: 4rem 2rem;
+    padding: 4rem 4rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .beverage-card {
+    padding: 4rem 3rem;
   }
 }
