@@ -16,3 +16,15 @@
   display: flex;
   align-items: center;
 }
+
+@media screen and (max-width: 768px) {
+  .list-of-menu-section .inner-container {
+    flex-direction: column;
+  }
+  .list-of-menu-section .image-section {
+    display: none;
+  }
+  .list-of-menu-section .card-section {
+    width: 100%;
+  }
+}

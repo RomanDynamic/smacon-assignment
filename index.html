@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sushi Omakase</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="sushi.css" />
+    <link rel="stylesheet" href="/assets/css/sushi.css" />
     <link rel="stylesheet" href="/assets/css/omakase.css" />
     <link rel="stylesheet" href="/assets/css/list-of-menu-section.css" />
     <link rel="stylesheet" href="/assets/css/beverage.css" />
@@ -37,7 +37,7 @@
   <body>
     <!-- Navbar -->
     <header class="navbar-header container">
-      <div class="navbar">
+      <div class="navbar for-large-screen">
         <nav>
           <ul style="text-transform: uppercase">
             <li><a href="#">About</a></li>
@@ -51,7 +51,29 @@
           <button class="btn-book">Book a Table</button>
         </div>
       </div>
+
+      <!-- Hamburger menu for small screens -->
+      <div class="navbar for-small-screen">
+        <div class="menu-toggle" id="mobile-menu">
+          <div class="hamburger"></div>
+        </div>
+        <img class="logo" src="/assets/images/logo-navbar.png" />
+        <!-- <div class="nav-info">
+          <span class="contact">+23 344 434</span>
+          <button class="btn-book">Book a Table</button>
+        </div> -->
+        <!-- Slide-in Menu -->
+        <nav class="slide-in-menu" id="slide-in-menu">
+          <button class="close-btn" id="close-menu">X</button>
+          <ul style="text-transform: uppercase">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
+
     <div class="section-container">
       <!-- Main Section -->
       <section class="hero container">
@@ -304,7 +326,7 @@
             OUR CUSTOMERS <span class="section-title-gray"> LOVE US</span>
           </div>
         </div>
-        <div class="slider-container">
+        <div class="slider-container container">
           <div class="slider" id="reviews"></div>
         </div>
       </section>
@@ -394,6 +416,7 @@
     <script src="/assets/js/dessertItems.js"></script>
     <script src="/assets/js/slider.js"></script>
     <script src="/assets/js/reserve.js"></script>
+    <script src="/assets/js/navbar.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

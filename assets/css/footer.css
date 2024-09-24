@@ -63,3 +63,27 @@
 .book-button:hover {
   background-color: #555;
 }
+
+@media screen and (max-width: 768px) {
+  .footer-container,
+  .logo-container {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-links a {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  .right-section {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+  }
+}

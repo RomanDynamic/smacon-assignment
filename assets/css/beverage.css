@@ -77,3 +77,17 @@ h2 {
   font-size: 48px;
   font-weight: 500;
 }
+@media screen and (max-width: 768px) {
+  #beverage-items,
+  #food-items,
+  #dessert-items {
+    display: grid !important;
+    grid-template-columns: auto;
+    column-gap: 0;
+    row-gap: 0.5rem;
+  }
+
+  .beverage-card {
+    padding: 4rem 2rem;
+  }
+}
